@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>List of Notes</h1>
+    <ul class="row">
+     {% for note in notes %}
+      <li class="col-md-3 card me-2 p-3">
+        <h4>{{ note.title }}</h4>
+         <small><time>{{ note.created_at }}</time></small>
+        <p>{{ note.description | truncatechars:20 }}</p>
+      </li>
+     {% endfor %}
+
+    </ul>
+{% endblock %}
