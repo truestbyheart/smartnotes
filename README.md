@@ -1,0 +1,2 @@
+# smartnotes
+Learning django project
